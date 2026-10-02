@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <AssemblyName>FslParty</AssemblyName>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <!-- Where FRUKT is installed. Override with -p:FruktGameDir="..." or a FruktGameDir environment variable. -->
+    <FruktGameDir Condition="'$(FruktGameDir)' == ''">D:\SteamLibrary\steamapps\common\FRUKT</FruktGameDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(FruktGameDir)\Mods\FruktSharedLibrary.dll" Private="false" />
+    <Reference Include="$(FruktGameDir)\MelonLoader\net6\MelonLoader.dll" Private="false" />
+    <Reference Include="$(FruktGameDir)\MelonLoader\net6\Il2CppInterop.Runtime.dll" Private="false" />
+    <Reference Include="$(FruktGameDir)\MelonLoader\Il2CppAssemblies\Il2CppFRUKT.dll" Private="false" />
+    <Reference Include="$(FruktGameDir)\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll" Private="false" />
+    <Reference Include="$(FruktGameDir)\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="$(FruktGameDir)\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll" Private="false" />
+    <Reference Include="$(FruktGameDir)\MelonLoader\Il2CppAssemblies\Unity.InputSystem.dll" Private="false" />
+  </ItemGroup>
+
+</Project>
